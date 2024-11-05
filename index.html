@@ -1,39 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <title>cssTomfoolery</title>
-      <meta charset="utf-8">
-      <style>
-         :root {
-         --grey: #d5ddea;
-         --black: #1a1917;
-         --dark-grey: #504e4f;
-         --bg: whitesmoke
-         }
-         body {
-         background-color: var(--bg);
-         }
-         #computer {
-         background:
-         /* screen */
-         linear-gradient(to right, var(--black) 25px, transparent 25px),
-         linear-gradient(to left, var(--black) 25px, transparent 25px) 10px -20px,
-         var(--bg);
-         background-repeat: no-repeat;
-         height: 450px;
-         width: 700px;
-         }
-         #computer::before,
-         #computer::after {
-         content: '';
-         display: block;
-         position: absolute;
-         height: 1000px;
-         width: 1000px;
-         }
-      </style>
-   </head>
-   <body>
-      <div id="computer"></div>
-   </body>
+
+<head>
+  <title>cssTomfoolery</title>
+  <meta charset="utf-8">
+  <style>
+    :root {
+      --grey: #d5ddea;
+      --black: #1a1917;
+      --dark-grey: #504e4f;
+      --bg: whitesmoke
+    }
+
+    body {
+      background-color: var(--bg);
+    }
+
+    #computer {
+      background:
+        /* screen */
+        /* linear-gradient(to right, var(--black) 250px, transparent 0) 217px */
+        linear-gradient(225deg, var(--black) 191px, transparent 0) -213px 190px,
+        linear-gradient(45deg, var(--black) 191px, transparent 0) 217px 10px,
+        var(--bg);
+      background-repeat: no-repeat;
+      height: 450px;
+      width: 700px;
+    }
+
+    #computer::before,
+    #computer::after {
+      content: '';
+      display: block;
+      position: absolute;
+    }
+
+    .border {
+      border: 3px dotted darkgrey;
+      display: inline-block;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="border" style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);">
+    <div id="computer"></div>
+  </div>
+</body>
+
 </html>
